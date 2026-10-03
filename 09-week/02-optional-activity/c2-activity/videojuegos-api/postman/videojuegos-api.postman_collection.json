@@ -1,0 +1,195 @@
+{
+  "info": {
+    "name": "videojuegos-api",
+    "description": "Pruebas del CRUD del catálogo de videojuegos, en el orden en que se ejecutan.",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "1. Crear videojuego",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "url": {
+          "raw": "http://localhost:8080/api/videojuegos",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "api",
+            "videojuegos"
+          ]
+        },
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"titulo\": \"EA Sports FC 26\",\n  \"genero\": \"Deportes\",\n  \"plataforma\": \"PS5\",\n  \"precio\": 279900,\n  \"anioLanzamiento\": 2025\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "2. Crear segundo videojuego",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "url": {
+          "raw": "http://localhost:8080/api/videojuegos",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "api",
+            "videojuegos"
+          ]
+        },
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"titulo\": \"The Legend of Zelda: Tears of the Kingdom\",\n  \"genero\": \"Aventura\",\n  \"plataforma\": \"Nintendo Switch\",\n  \"precio\": 249900,\n  \"anioLanzamiento\": 2023\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "3. Listar videojuegos",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:8080/api/videojuegos",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "api",
+            "videojuegos"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "4. Obtener videojuego 1",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:8080/api/videojuegos/1",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "api",
+            "videojuegos",
+            "1"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "5. Actualizar videojuego 1",
+      "request": {
+        "method": "PUT",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "url": {
+          "raw": "http://localhost:8080/api/videojuegos/1",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "api",
+            "videojuegos",
+            "1"
+          ]
+        },
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"titulo\": \"EA Sports FC 26\",\n  \"genero\": \"Deportes\",\n  \"plataforma\": \"PS5\",\n  \"precio\": 199900,\n  \"anioLanzamiento\": 2025\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "6. Borrar videojuego 2",
+      "request": {
+        "method": "DELETE",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:8080/api/videojuegos/2",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "api",
+            "videojuegos",
+            "2"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "7. Error 404 - videojuego borrado",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:8080/api/videojuegos/2",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "api",
+            "videojuegos",
+            "2"
+          ]
+        }
+      },
+      "response": []
+    }
+  ]
+}
