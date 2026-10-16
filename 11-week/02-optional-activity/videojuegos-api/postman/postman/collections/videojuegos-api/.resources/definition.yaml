@@ -1,0 +1,4 @@
+$kind: collection
+description: Pruebas del login con JWT y de los endpoints protegidos, en el orden en que se ejecutan.
+variables:
+  token: ""
