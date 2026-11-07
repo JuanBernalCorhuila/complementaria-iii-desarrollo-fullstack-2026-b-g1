@@ -1,0 +1,100 @@
+body {
+  margin: 0;
+  font-family: system-ui, sans-serif;
+  background: #f1f3f6;
+  color: #1f2430;
+}
+
+.contenedor {
+  max-width: 820px;
+  margin: 0 auto;
+  padding: 2rem 1rem;
+}
+
+h1 {
+  text-align: center;
+  color: #2d3a8c;
+}
+
+.tarjeta {
+  background: #fff;
+  border-radius: 8px;
+  padding: 1.5rem;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+.login {
+  max-width: 320px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.login h2 {
+  margin-top: 0;
+}
+
+input {
+  padding: 0.5rem;
+  border: 1px solid #c5cad3;
+  border-radius: 6px;
+  font-size: 1rem;
+}
+
+button {
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: 6px;
+  background: #2d3a8c;
+  color: #fff;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+button:disabled {
+  background: #8a93c4;
+  cursor: wait;
+}
+
+.login button {
+  margin-top: 0.5rem;
+}
+
+.encabezado {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.encabezado h2 {
+  margin: 0;
+}
+
+table {
+  width: 100%;
+  margin-top: 1rem;
+  border-collapse: collapse;
+}
+
+th,
+td {
+  padding: 0.6rem;
+  text-align: left;
+  border-bottom: 1px solid #e3e6eb;
+}
+
+th {
+  background: #eef0f8;
+}
+
+.cargando {
+  color: #2d3a8c;
+}
+
+.error {
+  color: #b42318;
+  background: #fdecea;
+  padding: 0.6rem;
+  border-radius: 6px;
+}

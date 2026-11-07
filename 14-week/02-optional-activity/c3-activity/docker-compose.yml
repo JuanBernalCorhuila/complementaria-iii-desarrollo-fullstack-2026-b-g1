@@ -1,0 +1,19 @@
+services:
+  # Backend: la API de videojuegos (la base H2 va dentro de este mismo contenedor)
+  api:
+    build: ./videojuegos-api
+    image: videojuegos-api
+    container_name: videojuegos-api
+    ports:
+      - "8080:8080"
+
+  # Frontend: React ya construido y servido por nginx
+  # Se publica en el 5173 porque ese es el origen que la API permite en CORS
+  front:
+    build: ./videojuegos-front
+    image: videojuegos-front
+    container_name: videojuegos-front
+    ports:
+      - "5173:80"
+    depends_on:
+      - api
