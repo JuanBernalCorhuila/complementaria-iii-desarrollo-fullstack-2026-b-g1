@@ -18,7 +18,7 @@ Dockerfile  --docker build-->  Imagen  --docker run -p-->  Contenedor (API en el
 ## 1. Estructura del proyecto
 
 ```
-actividad-semana-14/
+actividad-opcional/
 ├── README.md
 ├── evidencias/                                   (capturas de la construcción, la ejecución y la verificación)
 └── videojuegos-api/                              (backend)
