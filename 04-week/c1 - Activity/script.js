@@ -1,5 +1,4 @@
-const API_URL = "https://www.thesportsdb.com/api/v1/json/3/search_all_teams.php?l=Spanish%20La%20Liga";
-
+const API_URL = "https://www.thesportsdb.com/api/v1/json/123/search_all_teams.php?l=Spanish%20La%20Liga";
 const loadingEl = document.getElementById("loading");
 const errorEl = document.getElementById("error");
 const teamsContainer = document.getElementById("teams-container");
