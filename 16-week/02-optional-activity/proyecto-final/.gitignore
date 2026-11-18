@@ -1,0 +1,2 @@
+# Variables de entorno reales (tienen la clave JWT): no se suben
+.env

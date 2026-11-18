@@ -1,0 +1,26 @@
+services:
+  # Backend: la API de videojuegos (la base H2 va dentro de este mismo contenedor)
+  api:
+    build: ./videojuegos-api
+    image: videojuegos-api
+    container_name: videojuegos-api
+    ports:
+      - "8080:8080"
+    # Los valores se leen del archivo .env (que no se sube a GitHub)
+    environment:
+      JWT_SECRET: ${JWT_SECRET:?Falta JWT_SECRET en el archivo .env}
+      CORS_ORIGIN: ${CORS_ORIGIN:-http://localhost:5173}
+
+  # Frontend: React ya construido y servido por nginx
+  front:
+    build:
+      context: ./videojuegos-front
+      # Vite mete la URL de la API dentro del JavaScript al construir, por eso va como argumento de build
+      args:
+        VITE_API_URL: ${VITE_API_URL:-http://localhost:8080/api}
+    image: videojuegos-front
+    container_name: videojuegos-front
+    ports:
+      - "5173:80"
+    depends_on:
+      - api
